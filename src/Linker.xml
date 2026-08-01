@@ -1,4 +1,0 @@
-<linker>
-    <assembly fullname="Oxide.Compiler"/>
-    <assembly fullname="Oxide.Common"/>
-</linker>
