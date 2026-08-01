@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+   <PropertyGroup>
+      <Version>1.0.0</Version>
+      <OutputType>Exe</OutputType>
+      <TargetFramework>net9.0</TargetFramework>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+      <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+      <InvariantGlobalization>true</InvariantGlobalization>
+      <LangVersion>default</LangVersion>
+      <RootNamespace>Oxide.CompilerServices</RootNamespace>
+      <Title>Oxide Compiler</Title>
+      <ApplicationIcon>icon.ico</ApplicationIcon>
+      <Authors>Oxide Team and Contributors</Authors>
+      <Company>OxideMod</Company>
+      <Description>.NET 10 Compiler for the OxideMod modding framework</Description>
+      <Copyright>(c) 2013-$([System.DateTime]::Now.Year) $(Company)</Copyright>
+      <PackageProjectUrl>https://github.com/OxideMod/Oxide.Compiler</PackageProjectUrl>
+      <PackageIcon>icon.png</PackageIcon>
+      <RepositoryUrl>https://github.com/OxideMod/Oxide.Compiler</RepositoryUrl>
+     <ServerGarbageCollection>false</ServerGarbageCollection>
+     <RuntimeIdentifiers>linux-arm64;linux-x64;win-x64</RuntimeIdentifiers>
+     <Platforms>AnyCPU;ARM64</Platforms>
+   </PropertyGroup>
+   <ItemGroup>
+      <!-- Lets the console app (Sdk="Microsoft.NET.Sdk") use Kestrel/minimal APIs
+           for the http validation daemon without switching to Sdk.Web. -->
+      <FrameworkReference Include="Microsoft.AspNetCore.App" />
+   </ItemGroup>
+   <ItemGroup>
+      <Content Include="icon.ico" />
+   </ItemGroup>
+   <ItemGroup>
+      <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="5.0.0" />
+      <PackageReference Include="Serilog.Extensions.Logging" Version="10.0.0" />
+      <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+      <PackageReference Include="System.Runtime.Serialization.Formatters" Version="10.0.2" />
+   </ItemGroup>
+   <ItemGroup>
+      <None Update="icon.png">
+         <Pack>True</Pack>
+         <PackagePath>\</PackagePath>
+      </None>
+   </ItemGroup>
+   <ItemGroup>
+      <TrimmerRootDescriptor Include="Linker.xml" />
+   </ItemGroup>
+</Project>

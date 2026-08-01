@@ -1,0 +1,19 @@
+{
+  "Compiler": {
+    "EnableHttpServer": true
+  },
+  "Http": {
+    "ListenAddress": "0.0.0.0",
+    "Port": 5085,
+    "ApiKey": "CHANGE-ME-TO-A-LONG-RANDOM-SECRET",
+    "MaxUploadBytes": 5000000,
+    "TimeoutSeconds": 30,
+
+    "// MainReferencesPath / StagingReferencesPath": "Optional overrides. If omitted, these default to Main-references and Staging-references folders created automatically next to the compiler executable.",
+    "MainReferencesPath": null,
+    "StagingReferencesPath": null
+  },
+  "Logging": {
+    "Level": "Information"
+  }
+}
